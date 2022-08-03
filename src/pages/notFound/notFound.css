@@ -1,0 +1,36 @@
+.not-found__container {
+  width: 100%;
+  height: 100%;
+}
+
+.not-found-title__container {
+  padding: 12px;
+}
+
+.not-found-title__container h1 {
+  font-size: var(--font-size-lg);
+  color: #000;
+}
+
+.not-found-description__container {
+  padding: 0 16px;
+}
+
+.not-found-description__container p {
+  color: #000;
+}
+
+@media (min-width: 1024px) {
+  .not-found-description__container p {
+    font-size: var(--font-size-md);
+  }
+}
+
+@media (min-width: 1440px) {
+  .not-found-title__container h1 {
+    font-size: var(--font-size-xl);
+  }
+  .not-found-description__container p {
+    font-size: var(--font-size-lg);
+  }
+}

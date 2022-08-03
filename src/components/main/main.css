@@ -1,0 +1,21 @@
+.main-filter-container {
+  display: flex;
+}
+
+.main-car-container {
+  display: grid;
+  column-gap: 0.1rem;
+  row-gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  padding: 5px 0;
+  margin-top: 16px;
+}
+
+@media (min-width: 1024px) {
+  .main-container {
+    padding: 20px 70px;
+  }
+  .main-car-container {
+    margin: 60px 0;
+  }
+}
