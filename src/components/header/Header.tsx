@@ -28,9 +28,12 @@ function Header({ page }: HeaderProps) {
     <header className="header-container">
       <div className="header-content">
         <div className="header-button-container-left">
-          <button className="header-button">
-            <img className="header-button-img-ego" src={egoLogo} alt="" />
-          </button>
+          <Link to={"/"}>
+            <button className="header-button">
+              <img className="header-button-img-ego" src={egoLogo} alt="" />
+            </button>
+          </Link>
+
           <div className="header-buttons-content_left">
             <div className="buttons-container_left">
               <Link to={"/"}>

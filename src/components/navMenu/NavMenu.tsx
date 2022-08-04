@@ -21,64 +21,64 @@ function NavMenu({ toggleNavMenu }: NavMenuProps) {
       <div className="navmenu-container-list">
         <ul className="navmenu-content__links">
           <li>
-            <a href="">Modelos</a>
+            <a href="#Models">Modelos</a>
           </li>
           <li>
-            <a href="">Servicios y Accesorios</a>
+            <a href="#Services&Accessories">Servicios y Accesorios</a>
           </li>
           <li>
-            <a href="">Financiación</a>
+            <a href="#financing">Financiación</a>
           </li>
           <li>
-            <a href="">Reviews y Comunidad</a>
-          </li>
-        </ul>
-      </div>
-      <div className="navmenu-container-list">
-        <ul className="navmenu-content__links">
-          <li>
-            <a href="">Toyota Mobility Service</a>
-          </li>
-          <li>
-            <a href="">Toyota Gazoo Racing</a>
-          </li>
-          <li>
-            <a href="">Toyota Híbridos</a>
+            <a href="#Reviews&Community">Reviews y Comunidad</a>
           </li>
         </ul>
       </div>
       <div className="navmenu-container-list">
         <ul className="navmenu-content__links">
           <li>
-            <a href="">Concesionarios</a>
+            <a href="#ToyotaMobilityService">Toyota Mobility Service</a>
           </li>
           <li>
-            <a href="">Test Drive</a>
+            <a href="#ToyotaGazooRacing">Toyota Gazoo Racing</a>
           </li>
           <li>
-            <a href="">Contacto</a>
+            <a href="#ToyotaHíbridos">Toyota Híbridos</a>
+          </li>
+        </ul>
+      </div>
+      <div className="navmenu-container-list">
+        <ul className="navmenu-content__links">
+          <li>
+            <a href="#Concesionarios">Concesionarios</a>
+          </li>
+          <li>
+            <a href="#TestDrive">Test Drive</a>
+          </li>
+          <li>
+            <a href="#Contact">Contacto</a>
           </li>
         </ul>
       </div>
       <div className="navmenu-container-list navmenu-container-list__end">
         <ul className="navmenu-content__links">
           <li>
-            <a href="">Actividades</a>
+            <a href="#Activities">Actividades</a>
           </li>
           <li>
-            <a href="">Servicios al Cliente</a>
+            <a href="#ClientService">Servicios al Cliente</a>
           </li>
           <li>
-            <a href="">Ventas Especiales</a>
+            <a href="#Especials">Ventas Especiales</a>
           </li>
           <li>
-            <a href="">Innovación</a>
+            <a href="#">Innovación</a>
           </li>
           <li>
-            <a href="">Prensa</a>
+            <a href="#">Prensa</a>
           </li>
           <li>
-            <a href="">Acerca de...</a>
+            <a href="#About">Acerca de...</a>
           </li>
         </ul>
       </div>
