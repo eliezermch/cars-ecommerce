@@ -45,4 +45,8 @@
   .car-button {
     display: block;
   }
+  .car-img {
+    width: 225px;
+    height: 195px;
+  }
 }
