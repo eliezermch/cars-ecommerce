@@ -18,7 +18,6 @@ import "./main.css";
 
 function Main() {
   const [state, dispatch] = useGlobatState();
-  console.log("🚀 ~ state", state);
 
   useEffect(() => {
     (async () => {
