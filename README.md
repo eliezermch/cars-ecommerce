@@ -1,6 +1,6 @@
-# Cars E-commerce
+# Car E-commerce
 
-This is a Cars e-commerce using **React** and **react-router-dom**. I make this app to practice and improve my skills in **TypeScript** and **React**.
+This is a Car e-commerce using **React** and **react-router-dom**. I made this app to practice and improve my skills in **TypeScript** and **React**.
 
 - TypeScript
 - Calls APIs
