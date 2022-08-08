@@ -16,8 +16,8 @@
     padding: 20px 70px;
   }
   .main-car-container {
-    margin: 60px 0;
-    column-gap: 1rem;
-    row-gap: 2.4rem;
+    margin: 40px 0;
+    column-gap: 0rem;
+    row-gap: 1.4rem;
   }
 }
