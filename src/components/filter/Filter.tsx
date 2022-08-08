@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { Dispatch, SetStateAction } from "react";
 
 // ------------- Styles -------------//
 import "./filter.css";
@@ -10,27 +10,33 @@ import upArrow from "../../assets/icon/up-arrow.png";
 // ------------- InterfaceProps -------------//
 interface FilterProps {
   filterMode: string;
-  originalState: () => void;
-  sortedByPriceM: () => void;
-  sortedByPriceP: () => void;
-  sortedByYearM: () => void;
-  sortedByYearP: () => void;
+  showFilter?: boolean;
+  setShowFilter?: Dispatch<SetStateAction<boolean>>;
+  originalState?: () => void;
+  sortedByPriceM?: () => void;
+  sortedByPriceP?: () => void;
+  sortedByYearM?: () => void;
+  sortedByYearP?: () => void;
 }
 
 function Filter({
   filterMode,
+  showFilter,
+  setShowFilter,
   originalState,
   sortedByPriceM,
   sortedByPriceP,
   sortedByYearM,
   sortedByYearP,
 }: FilterProps) {
-  const [showFilter, setShowFilter] = useState(false);
+  // const [showFilter, setShowFilter] = useState(false);
 
   const arrow = showFilter === false ? downArrow : upArrow;
 
   const toggleFilter = () => {
-    setShowFilter(!showFilter);
+    if (typeof setShowFilter !== "undefined") {
+      setShowFilter(!showFilter);
+    }
   };
 
   return (

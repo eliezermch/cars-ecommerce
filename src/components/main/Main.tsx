@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 // ------------- Components -------------//
 import { Car } from "../car/Car";
@@ -18,6 +18,8 @@ import "./main.css";
 
 function Main() {
   const [state, dispatch] = useGlobatState();
+  const [showFilter, setShowFilter] = useState(false);
+  const [showOrder, setShowOrder] = useState(false);
 
   useEffect(() => {
     (async () => {
@@ -33,6 +35,7 @@ function Main() {
   // ------- Original State -------//
   const originalState = () => {
     dispatch(state?.cars?.sort((a: CarsType, b: CarsType) => a.id - b.id));
+    setShowOrder(!setShowOrder);
   };
 
   // ------- Sorted By Price - to + -------//
@@ -40,6 +43,7 @@ function Main() {
     dispatch(
       state?.cars?.sort((a: CarsType, b: CarsType) => a.price - b.price)
     );
+    setShowOrder(!setShowOrder);
   };
 
   // ------- Sorted By Price + to - -------//
@@ -47,16 +51,19 @@ function Main() {
     dispatch(
       state?.cars?.sort((a: CarsType, b: CarsType) => b.price - a.price)
     );
+    setShowOrder(!setShowOrder);
   };
 
   // ------- Sorted By Year - to + -------//
   const sortedByYearM = () => {
     dispatch(state?.cars?.sort((a: CarsType, b: CarsType) => a.year - b.year));
+    setShowOrder(!setShowOrder);
   };
 
   // ------- Sorted By Year + to - -------//
   const sortedByYearP = () => {
     dispatch(state?.cars?.sort((a: CarsType, b: CarsType) => b.year - a.year));
+    setShowOrder(!setShowOrder);
   };
 
   return (
@@ -64,14 +71,13 @@ function Main() {
       <div className="main-filter-container">
         <Filter
           filterMode="filter"
-          originalState={originalState}
-          sortedByPriceM={sortedByPriceM}
-          sortedByPriceP={sortedByPriceP}
-          sortedByYearM={sortedByYearM}
-          sortedByYearP={sortedByYearP}
+          showFilter={showFilter}
+          setShowFilter={setShowFilter}
         />
         <Filter
           filterMode="order"
+          showFilter={showOrder}
+          setShowFilter={setShowOrder}
           originalState={originalState}
           sortedByPriceM={sortedByPriceM}
           sortedByPriceP={sortedByPriceP}
