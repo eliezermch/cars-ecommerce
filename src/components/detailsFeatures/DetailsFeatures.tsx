@@ -1,5 +1,8 @@
+import { Splide, SplideSlide } from "@splidejs/react-splide";
+
 // ------------- Styles -------------//
 import "./detailsFeatures.css";
+import "@splidejs/react-splide/css";
 
 // ------------- InterfaceProps -------------//
 interface DetailsFeaturesProps {
@@ -20,26 +23,81 @@ function DetailsFeatures({
   secondFeature,
 }: DetailsFeaturesProps) {
   return (
-    <div className="detailsfeatures-container">
-      <div className="detailsfeatures-content">
-        <div className="detailsfeatures-content__img">
-          <img src={firstFeature?.image} alt="" />
+    <Splide
+      options={{
+        rewind: true,
+        fixedWidth: "17rem",
+        gap: "1rem",
+      }}
+      className="detailsfeatures-container"
+    >
+      <SplideSlide>
+        <div className="detailsfeatures-content">
+          <div className="detailsfeatures-content__img">
+            <img src={firstFeature?.image} alt="" />
+          </div>
+          <div className="detailsfeatures-content__info">
+            <h4>{firstFeature?.name}</h4>
+            <p>{firstFeature?.description}</p>
+          </div>
         </div>
-        <div className="detailsfeatures-content__info">
-          <h4>{firstFeature?.name}</h4>
-          <p>{firstFeature?.description}</p>
+      </SplideSlide>
+      <SplideSlide>
+        <div className="detailsfeatures-content">
+          <div className="detailsfeatures-content__img">
+            <img src={secondFeature?.image} alt="" />
+          </div>
+          <div className="detailsfeatures-content__info">
+            <h4>{secondFeature?.name}</h4>
+            <p>{secondFeature?.description}</p>
+          </div>
         </div>
-      </div>
-      <div className="detailsfeatures-content">
-        <div className="detailsfeatures-content__img">
-          <img src={secondFeature?.image} alt="" />
+      </SplideSlide>
+      <SplideSlide>
+        <div className="detailsfeatures-content">
+          <div className="detailsfeatures-content__img">
+            <img src={secondFeature?.image} alt="" />
+          </div>
+          <div className="detailsfeatures-content__info">
+            <h4>{secondFeature?.name}</h4>
+            <p>{secondFeature?.description}</p>
+          </div>
         </div>
-        <div className="detailsfeatures-content__info">
-          <h4>{secondFeature?.name}</h4>
-          <p>{secondFeature?.description}</p>
+      </SplideSlide>
+      <SplideSlide>
+        <div className="detailsfeatures-content">
+          <div className="detailsfeatures-content__img">
+            <img src={firstFeature?.image} alt="" />
+          </div>
+          <div className="detailsfeatures-content__info">
+            <h4>{firstFeature?.name}</h4>
+            <p>{firstFeature?.description}</p>
+          </div>
         </div>
-      </div>
-    </div>
+      </SplideSlide>
+      <SplideSlide>
+        <div className="detailsfeatures-content">
+          <div className="detailsfeatures-content__img">
+            <img src={secondFeature?.image} alt="" />
+          </div>
+          <div className="detailsfeatures-content__info">
+            <h4>{secondFeature?.name}</h4>
+            <p>{secondFeature?.description}</p>
+          </div>
+        </div>
+      </SplideSlide>
+      <SplideSlide>
+        <div className="detailsfeatures-content">
+          <div className="detailsfeatures-content__img">
+            <img src={firstFeature?.image} alt="" />
+          </div>
+          <div className="detailsfeatures-content__info">
+            <h4>{firstFeature?.name}</h4>
+            <p>{firstFeature?.description}</p>
+          </div>
+        </div>
+      </SplideSlide>
+    </Splide>
   );
 }
 

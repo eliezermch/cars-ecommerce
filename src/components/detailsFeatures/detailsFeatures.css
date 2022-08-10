@@ -38,6 +38,9 @@
     justify-content: space-evenly;
     overflow-x: hidden;
   }
+  .detailsfeatures-content__info {
+    text-align: center;
+  }
 }
 
 @media (min-width: 1024px) {
