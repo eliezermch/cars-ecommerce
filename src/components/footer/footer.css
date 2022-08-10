@@ -3,3 +3,15 @@
   height: 50px;
   background-color: black;
 }
+
+.footer-content {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-content p {
+  font-size: var(--font-size-md);
+  color: #fff;
+}
