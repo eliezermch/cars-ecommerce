@@ -26,6 +26,7 @@ function DetailsFeatures({
     <Splide
       options={{
         rewind: true,
+        perPage: 3,
         fixedWidth: "17rem",
         gap: "1rem",
       }}
